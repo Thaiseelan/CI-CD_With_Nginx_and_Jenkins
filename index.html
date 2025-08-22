@@ -1,87 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ta">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Global Warming & Its Impact</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>தமிழ் வாழ்க</title>
   <style>
+    :root {
+      --bg: #0b1020;
+      --card: #121a33;
+      --accent: #ffb703;
+      --text: #eaf0ff;
+      --muted: #9fb2ff;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #f9f9f9, #e0f7fa);
       margin: 0;
-      padding: 0;
-      color: #333;
-      line-height: 1.6;
+      font-family: "Noto Sans Tamil", system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 80% -10%, #1a2350 0%, var(--bg) 60%);
+      color: var(--text);
+      line-height: 1.65;
     }
     header {
-      background: #00695c;
-      color: #fff;
-      padding: 20px;
+      padding: 64px 20px 40px;
       text-align: center;
     }
-    section {
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
+    .badge {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid #2b3a7a;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.03);
     }
-    h1, h2 {
-      color: #004d40;
+    h1 {
+      font-size: clamp(36px, 6vw, 64px);
+      margin: 10px 0 6px;
+      letter-spacing: 0.5px;
     }
-    .impact {
-      background: #ffe0b2;
-      padding: 15px;
-      margin: 15px 0;
-      border-left: 5px solid #ff5722;
-      border-radius: 5px;
+    .subtitle {
+      font-size: clamp(16px, 2.4vw, 20px);
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+    .cta {
+      display: inline-block;
+      background: linear-gradient(90deg, #ffb703, #ffd166);
+      color: #121212;
+      padding: 12px 20px;
+      border-radius: 12px;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(255,183,3,0.25);
+      transition: transform .12s ease;
+    }
+    .cta:hover { transform: translateY(-2px); }
+    main {
+      max-width: 1000px;
+      margin: 30px auto 60px;
+      padding: 0 20px;
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1fr;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+      border: 1px solid #223066;
+      border-radius: 16px;
+      padding: 18px 20px;
+      backdrop-filter: blur(6px);
+    }
+    .card h2 {
+      margin: 6px 0 8px;
+      font-size: 22px;
+      color: #d6e0ff;
+    }
+    .big {
+      font-size: clamp(28px, 5vw, 44px);
+      margin: 4px 0 10px;
+      color: var(--accent);
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
+    }
+    blockquote {
+      margin: 0;
+      padding-left: 14px;
+      border-left: 4px solid var(--accent);
+      color: #f2f4ff;
+      font-style: italic;
     }
     footer {
-      background: #004d40;
-      color: #fff;
       text-align: center;
-      padding: 15px;
-      margin-top: 20px;
+      padding: 28px 20px 60px;
+      color: var(--muted);
+      font-size: 14px;
     }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   </style>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Optional: If the server has internet, this font improves Tamil rendering -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>🌍 puvi veppamayam aathal mattrum adhan vilaivugal</h1>
-    <p>Act today to save tomorrow</p>
+    <span class="badge">🌟 தமிழ் பெருமை</span>
+    <h1>தமிழ் வாழ்க — உலகம் வാഴ்க</h1>
+    <p class="subtitle">அழகிய எழுத்து, செழுமையான இலக்கு, ஆயிரமாண்டுகளைக் கடந்த பண்பாடு.</p>
+    <a class="cta" href="#why">தமிழின் மெருகு காண</a>
   </header>
 
-  <section>
-    <h2>What is Global Warming?</h2>
-    <p>
-      Global warming refers to the long-term rise in Earth’s average temperature, 
-      mainly due to human activities like burning fossil fuels, deforestation, and industrial emissions.
-    </p>
+  <main>
+    <section class="card">
+      <div class="big">தமிழ்</div>
+      <p>
+        உலகின் தொன்மையானும் துல்லியமானும் விளங்கும் மொழிகளில் ஒன்று. 
+        கவிதை முதல் கணினி வரை, வீரம் முதல் விஞ்ஞானம் வரை—தமிழ் பேசும் மனம் எல்லைக்கடந்து பறக்கிறது.
+      </p>
+    </section>
 
-    <h2>Its Major Impacts</h2>
-    <div class="impact">
-      <strong>🌡️ Rising Temperatures:</strong> Heat waves are becoming more frequent and intense.
-    </div>
-    <div class="impact">
-      <strong>🌊 Melting Ice & Rising Seas:</strong> Glaciers are disappearing, causing sea levels to rise and threatening coastal cities.
-    </div>
-    <div class="impact">
-      <strong>🌪️ Extreme Weather:</strong> Hurricanes, floods, and droughts are becoming more destructive.
-    </div>
-    <div class="impact">
-      <strong>🐧 Loss of Biodiversity:</strong> Many species are at risk due to habitat destruction and climate shifts.
-    </div>
+    <section id="why" class="grid">
+      <div class="card">
+        <h2>📜 பாரம்பரியம்</h2>
+        <p>சங்க இலக்கியம், சிலப்பதிகாரம், திருக்குறள்—நெடுங்கால ஞானத்தின் பொக்கிஷம்.</p>
+      </div>
+      <div class="card">
+        <h2>🧠 அறிவியல் & தொழில்நுட்பம்</h2>
+        <p>மூலக்கருத்தைத் தெளிவாகச் சொல்லும் திறன்—ஆராய்ச்சி, நிரலாக்கம், புதுமை அனைத்திற்கும் துணை.</p>
+      </div>
+      <div class="card">
+        <h2>🎶 கலை & உணர்வு</h2>
+        <p>இசை, நயம், நுணுக்கம்—ஒவ்வொரு சொல்லிலும் உயிர்.</p>
+      </div>
+      <div class="card">
+        <h2>🌏 உலகளாவிய</h2>
+        <p>வெவ்வேறு கண்டங்களில் வாழும் தமிழர்கள்—மொழியும் மரபும் தொடரும் பாலம்.</p>
+      </div>
+    </section>
 
-    <h2>What Can We Do?</h2>
-    <ul>
-      <li>Switch to renewable energy sources 🌞</li>
-      <li>Plant more trees 🌱</li>
-      <li>Use energy-efficient devices 💡</li>
-      <li>Reduce, Reuse, Recycle ♻️</li>
-      <li>Spread awareness 📢</li>
-    </ul>
-  </section>
+    <section class="card">
+      <h2>🧭 திருக்குறள்</h2>
+      <blockquote>
+        அகர முதல எழுத்தெல்லாம் ஆதி<br />
+        பகவன் முதற்றே உலகு. — திருவள்ளுவர்
+      </blockquote>
+      <p style="margin-top:10px;">
+        அர்த்தம்: எல்லா எழுத்துகளுக்கும் அகரம் ஆரம்பம் போல, உலகத்திற்கும் ஆதிப் பொருள் அடிப்படை.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🚀 சொல்லுவோம் & செய்வோம்</h2>
+      <ul>
+        <li>தமிழில் படிக்கவும்—எழுதவும்—கற்பிக்கவும்.</li>
+        <li>தொழில்நுட்பத்தில் தமிழைப் பயன்படுத்த (உதா: UI i18n, Unicode, திறந்தமூலம்).</li>
+        <li>புத்தகங்கள், பாடல்கள், கவிதைகள்—பகிர்ந்து பரப்பவும்.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>💬 ஒரு வரி உறுதி</h2>
+      <p class="mono">“தமிழ் வாழ்க! தமிழ் வளர்க!”</p>
+    </section>
+  </main>
 
   <footer>
-    <p>🌱 Together, we can fight global warming and protect our planet 🌍</p>
+    © 2025 — பெருமை தமிழுக்கு. உருவாக்கம்: Chief-ன் DevOps லேப்.
   </footer>
 </body>
 </html>
